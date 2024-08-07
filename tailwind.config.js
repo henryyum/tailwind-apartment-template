@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       spacing: {
         'custom-container': '1980px',
-      }
+      },
     },
   },
   plugins: [
