@@ -9,11 +9,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- FontAwesome End -->
 
+  <!-- Swiper -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- Swiper End -->
 </head>
 <body class="scroll-smooth font-serif">
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white">
-    <div class="container my-0 mx-auto py-3 flex justify-between">
+    <div class="container my-0 mx-auto p-3 flex justify-between">
       <div>
         <img src="https://www.coolumatthebeach.com.au/assets/images/logos/logo.svg" alt="Website Logo">
       </div>
@@ -21,12 +26,20 @@
       <div class="flex gap-6 items-center">
         <div>
           <ul class="flex gap-4">
-            <li><i class="text-2xl text-teal-500 fa-brands fa-instagram"></i></li>
-            <li><i class="text-2xl text-teal-500 fa-brands fa-pinterest"></i></li>
-            <li><i class="text-2xl text-teal-500 fa-brands fa-facebook-f"></i></li>
+            <li><i class="text-3xl text-teal-500 fa-brands fa-instagram"></i></li>
+            <li><i class="text-3xl text-teal-500 fa-brands fa-pinterest"></i></li>
+            <li><i class="text-3xl text-teal-500 fa-brands fa-facebook-f"></i></li>
+             <!-- Hamburger -->
+          <button id="menu-btn" class="focus:outline-none lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>          
+         </button>
+        <!-- Hamburger End -->
           </ul>
         </div>
-        <div>
+
+        <div class="hidden flex-col items-start lg:flex">
           <a class="text-xl text-teal-500" href="#">+61 1 2345 6789</a>
           <h2 class="text-base text-gray-500 italic">1234 Example Suite, Coolum Beach</h2>
         </div>
@@ -34,9 +47,10 @@
     </div>
 
     <nav class="bg-gradient-to-r from-stone-50 to-teal-500">
-      <div class="container flex items-center justify-between mx-auto my-0 py-3">
-        <div class="flex-grow">
-          <ul class="text-slate-700 uppercase gap-16 flex font-medium">
+      <div class="container flex items-center justify-center lg:justify-between mx-auto my-0 p-3">
+
+        <div>
+          <ul class="text-slate-700 uppercase gap-16 font-medium hidden lg:flex">
             <li><a href="#about">about us</a></li>
             <li><a href="#gallery">gallery</a></li>
             <li><a href="#things">things to do</a></li>
@@ -44,6 +58,7 @@
             <li><a href="#subscribe">subscribe</a></li>
           </ul>
         </div>
+
         <div class="me-6">
           <ul class="uppercase font-medium">
             <li class="text-white"><a href="#">check availability & rates</a></li>
@@ -51,6 +66,22 @@
         </div>
       </div>
     </nav>
+
+    <div id="mobile-menu" class="w-full h-full fixed top-0 right-0 bg-white transform transform-transition translate-x-full ease-in-out duration-300">
+      <button id="close-menu-btn" class="absolute top-0 right-0 text-slate-500 focus:outline-none p-16">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <ul class="text-slate-500 uppercase font-medium flex flex-col gap-12 text-center py-20">
+      <li><a href="#about">about us</a></li>
+      <li><a href="#gallery">gallery</a></li>
+      <li><a href="#things">things to do</a></li>
+      <li><a href="#contact">contact us</a></li>
+      <li><a href="#subscribe">subscribe</a></li>
+    </ul>
+    </div>
+
   </header>
 
   <!-- Header End -->
@@ -136,18 +167,36 @@
         <p class="text-gray-500 text-2xl">Explore beautiful beaches, national parks, delicious food and island adventures.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-3 px-5">
-        <div class="col">
-          <a data-fslightbox="things" href="https://images.unsplash.com/photo-1522933001375-72d29575cf05?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="transition duration-200 hover:brightness-75 w-full h-full object-cover"src="https://images.unsplash.com/photo-1522933001375-72d29575cf05?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></a>
-          
-        </div>
-        <div class="col">
-          <a data-fslightbox="things" href="https://images.unsplash.com/photo-1540544660406-6a69dacb2804?q=80&w=2764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="transition duration-200 hover:brightness-75 w-full h-full object-cover"src="https://images.unsplash.com/photo-1540544660406-6a69dacb2804?q=80&w=2764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></a>
-          
-        </div>
-        <div class="col">
-          <a data-fslightbox="things" href="https://images.unsplash.com/photo-1538475711279-0373b6bc754e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="transition duration-200 hover:brightness-75 w-full h-full object-cover"src="https://images.unsplash.com/photo-1538475711279-0373b6bc754e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></a>
-        </div>
+      <div class="swiper">
+      
+          <div class="swiper-wrapper gap-3 px-5">
+            <div class="swiper-slide">
+              <a data-fslightbox="things" href="https://images.unsplash.com/photo-1522933001375-72d29575cf05?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="transition duration-200 hover:brightness-75 w-full h-full object-cover"src="https://images.unsplash.com/photo-1522933001375-72d29575cf05?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></a>
+              
+            </div>
+            <div class="swiper-slide">
+              <a data-fslightbox="things" href="https://images.unsplash.com/photo-1540544660406-6a69dacb2804?q=80&w=2764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="transition duration-200 hover:brightness-75 w-full h-full object-cover"src="https://images.unsplash.com/photo-1540544660406-6a69dacb2804?q=80&w=2764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></a>
+              
+            </div>
+            <div class="swiper-slide">
+              <a data-fslightbox="things" href="https://images.unsplash.com/photo-1538475711279-0373b6bc754e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="transition duration-200 hover:brightness-75 w-full h-full object-cover"src="https://images.unsplash.com/photo-1538475711279-0373b6bc754e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></a>
+            </div>
+
+            <div class="swiper-slide">
+              <a data-fslightbox="things" href="https://images.unsplash.com/photo-1522933001375-72d29575cf05?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="transition duration-200 hover:brightness-75 w-full h-full object-cover"src="https://images.unsplash.com/photo-1522933001375-72d29575cf05?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></a>
+              
+            </div>
+            <div class="swiper-slide">
+              <a data-fslightbox="things" href="https://images.unsplash.com/photo-1540544660406-6a69dacb2804?q=80&w=2764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="transition duration-200 hover:brightness-75 w-full h-full object-cover"src="https://images.unsplash.com/photo-1540544660406-6a69dacb2804?q=80&w=2764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></a>
+              
+            </div>
+            <div class="swiper-slide">
+              <a data-fslightbox="things" href="https://images.unsplash.com/photo-1538475711279-0373b6bc754e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="transition duration-200 hover:brightness-75 w-full h-full object-cover"src="https://images.unsplash.com/photo-1538475711279-0373b6bc754e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></a>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
 
       </div>
     </section>
@@ -258,6 +307,36 @@
   <script src="bundle.js"></script>
   <!-- Smooth Scroll CDN -->
   <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+      const swiper = new Swiper('.swiper', {
+      speed: 400,
+      spaceBetween: 100,
+      slidesPerView: 3,
+      spaceBetween: 10,
+
+  });
+
+
+  </script>
+  <!-- Swiper End -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburgerMenu = document.querySelector('#menu-btn')
+      const mobileNav = document.querySelector('#mobile-menu')
+      const closeMenu = document.querySelector('#close-menu-btn')
+
+      const toggleMenu = () => {
+        mobileNav.classList.toggle('translate-x-full')
+      }
+
+      closeMenu.addEventListener('click', toggleMenu)
+      hamburgerMenu.addEventListener('click', toggleMenu)
+
+    })
+  
+  </script>
 
 </body>
 </html>
